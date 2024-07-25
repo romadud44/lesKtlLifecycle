@@ -10,6 +10,7 @@ import com.example.lesktllifecycle.databinding.ActivitySecondBinding
 
 class SecondActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySecondBinding
+
     @SuppressLint("MissingInflatedId", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,27 +33,27 @@ class SecondActivity : AppCompatActivity() {
 
         when (binding.resultTV.text.toString().toDouble()) {
             in 0.0..18.5 -> {
-                binding.infoTV.text = "Низкая масса тела"
+                binding.infoTV.text = BodyMassIndex().textOne
                 binding.imageIV.setImageResource(R.drawable.imt1)
             }
 
-            in 18.51..24.9 -> {
-                binding.infoTV.text = "Нормальная масса тела"
+            in 18.5..24.9 -> {
+                binding.infoTV.text = BodyMassIndex().textTwo
                 binding.imageIV.setImageResource(R.drawable.imt2)
             }
 
-            in 24.91..29.9 -> {
-                binding.infoTV.text = "Предожирение"
+            in 24.91..29.99 -> {
+                binding.infoTV.text = BodyMassIndex().textTree
                 binding.imageIV.setImageResource(R.drawable.imt3)
             }
 
-            in 29.91..34.9 -> {
-                binding.infoTV.text = "Ожирение"
+            in 30.00..34.9 -> {
+                binding.infoTV.text = BodyMassIndex().textFour
                 binding.imageIV.setImageResource(R.drawable.imt4)
             }
 
             in 34.91..99999.99 -> {
-                binding.infoTV.text = "Высокая степень ожирения"
+                binding.infoTV.text = BodyMassIndex().textFive
                 binding.imageIV.setImageResource(R.drawable.imt5)
             }
 
