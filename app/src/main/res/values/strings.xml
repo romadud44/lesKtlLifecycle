@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">lesKtlLifecycle</string>
+    <string name="text_input_weight_ET">Введите вес в КГ</string>
+    <string name="text_input_height_ET">Введите рост в СМ</string>
+    <string name="text_result_BTN">Рассчитать</string>
+
+    <string name="text_result_TV">Результат</string>
+    <string name="text_info_TV">Здесь будет рекомендация</string>
+
+
+</resources>
